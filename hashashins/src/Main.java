@@ -10,7 +10,9 @@ public class Main {
             List<Photo> photos = inputFile.generatePhotos();
             SlideshowGenerator slideshowGenerator = new SlideshowGenerator(photos);
             slideshowGenerator.generateSlideshow();
-            inputFile.writeOutputFile(slideshowGenerator.getOutputText());
+            //inputFile.writeOutputFile(slideshowGenerator.getOutputText());
+
+            System.out.printf("File: %s%nScore:%s%n%n", inputFile.getFileName(), slideshowGenerator.getScore());
         }
     }
 

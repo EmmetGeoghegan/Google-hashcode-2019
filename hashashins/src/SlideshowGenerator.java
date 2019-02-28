@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class SlideshowGenerator {
     private List<Photo> photosAvailable;
@@ -26,6 +28,24 @@ public class SlideshowGenerator {
         }
 
         return output.toString();
+    }
+
+    public int getScore() {
+        int score = 0;
+
+        for (int i = 0; i < slides.size() - 1; i++) {
+            int aTags = slides.get(i).getCombinedTags().size();
+            int bTags = slides.get(i + 1).getCombinedTags().size();
+            Set<String> intersection = new HashSet<>(slides.get(i).getCombinedTags());
+            intersection.retainAll(slides.get(i + 1).getCombinedTags());
+
+            int subscore = Math.min(aTags, bTags);
+            subscore = Math.min(subscore, intersection.size());
+
+            score += subscore;
+        }
+
+        return score;
     }
 
 }

@@ -1,12 +1,16 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Photo {
     private int id;
     private boolean isHorizontal;
-    private String[] tags;
+    private Set tags;
 
     public Photo(int id, boolean isHorizontal, String[] tags) {
         this.id = id;
         this.isHorizontal = isHorizontal;
-        this.tags = tags;
+        this.tags = new HashSet(Arrays.asList(tags));
     }
 
     public int getId() {
@@ -17,7 +21,7 @@ public class Photo {
         return isHorizontal;
     }
 
-    public String[] getTags() {
+    public Set getTags() {
         return tags;
     }
 }
