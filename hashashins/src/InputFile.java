@@ -1,6 +1,9 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InputFile {
+    private File file;
     private String fileName;
     private int numSlides;
     private boolean[] isHorizontal;
@@ -8,6 +11,7 @@ public class InputFile {
     private String[][] tags;
 
     public InputFile(File file) {
+        this.file = file;
         fileName = file.getName().substring(0, file.getName().lastIndexOf("."));
         parse(file);
     }
@@ -27,8 +31,6 @@ public class InputFile {
                 for (int j = 2; j < parts.length; j++) {
                     tags[i][j - 2] = parts[j];
                 }
-
-
             }
 
         } catch (IOException e) {
@@ -56,6 +58,26 @@ public class InputFile {
 
     public String getFileName() {
         return fileName;
+    }
+
+    public List<Photo> generatePhotos() {
+        List<Photo> photos = new ArrayList<>(numSlides);
+
+        for (int i = 0; i < numSlides; i++) {
+            Photo photo = new Photo(i, isHorizontal[i], tags[i]);
+        }
+
+        return photos;
+    }
+
+    public void writeOutputFile(String output) {
+        File outputPath = new File("./hashashins/" + fileName + "_out.txt");
+
+        try {
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(outputPath)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
