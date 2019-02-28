@@ -38,13 +38,6 @@ public class InputFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        List<Photo> photos = new ArrayList<>(numSlides);
-
-        for (int i = 0; i < numSlides; i++) {
-            Photo photo = new Photo(i, isHorizontal[i], tags[i]);
-            photos.add(photo);
-        }
     }
 
     @Override
@@ -70,6 +63,13 @@ public class InputFile {
     }
 
     public List<Photo> getPhotos() {
+        List<Photo> photos = new ArrayList<>(numSlides);
+
+        for (int i = 0; i < numSlides; i++) {
+            Photo photo = new Photo(i, isHorizontal[i], tags[i]);
+            photos.add(photo);
+        }
+
         return photos;
     }
 

@@ -22,6 +22,8 @@ public class Main {
                         if (slideshowGenerator.getScore() > inputFiles[i].getBestScore()) {
                             inputFiles[i].setBestScore(slideshowGenerator.getScore());
                             inputFiles[i].writeOutputFile(slideshowGenerator.getOutputText());
+
+                            System.out.printf("Found better score for file %s: %s",inputFiles[i].getFileName(), inputFiles[i].getBestScore());
                         }
                     }
 
