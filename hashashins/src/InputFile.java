@@ -9,6 +9,8 @@ public class InputFile {
     private boolean[] isHorizontal;
     private int numTags;
     private String[][] tags;
+    private int bestScore = -1;
+    private List<Photo> photos;
 
     public InputFile(File file) {
         this.file = file;
@@ -36,6 +38,13 @@ public class InputFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        List<Photo> photos = new ArrayList<>(numSlides);
+
+        for (int i = 0; i < numSlides; i++) {
+            Photo photo = new Photo(i, isHorizontal[i], tags[i]);
+            photos.add(photo);
+        }
     }
 
     @Override
@@ -60,14 +69,7 @@ public class InputFile {
         return fileName;
     }
 
-    public List<Photo> generatePhotos() {
-        List<Photo> photos = new ArrayList<>(numSlides);
-
-        for (int i = 0; i < numSlides; i++) {
-            Photo photo = new Photo(i, isHorizontal[i], tags[i]);
-            photos.add(photo);
-        }
-
+    public List<Photo> getPhotos() {
         return photos;
     }
 
@@ -83,4 +85,11 @@ public class InputFile {
         }
     }
 
+    public int getBestScore() {
+        return bestScore;
+    }
+
+    public void setBestScore(int bestScore) {
+        this.bestScore = bestScore;
+    }
 }

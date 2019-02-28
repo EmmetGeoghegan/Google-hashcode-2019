@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class SlideshowGenerator {
     private List<Photo> photosAvailable;
@@ -14,8 +11,32 @@ public class SlideshowGenerator {
     }
 
     public void generateSlideshow() {
+        Random random = new Random();
+        List<Photo> verticalsAvailable = new ArrayList<>();
+        List<Slide> verticalSlides = new ArrayList<>(verticalsAvailable.size() / 2 + 5);
+        List<Slide> horizSlides = new ArrayList<>();
         for (Photo photo : photosAvailable) {
-            if (photo.isHorizontal()) slides.add(new Slide(photo, null));
+            if (!photo.isHorizontal()) {
+                verticalsAvailable.add(photo);
+            }
+            else {
+                horizSlides.add(new Slide(photo, null));
+            }
+        }
+
+        while (verticalsAvailable.size() >= 2) {
+            Photo photoA = verticalsAvailable.remove(random.nextInt(verticalsAvailable.size()));
+            Photo photoB = verticalsAvailable.remove(random.nextInt(verticalsAvailable.size()));
+
+            verticalSlides.add(new Slide(photoA, photoB));
+        }
+
+        List<Slide> slidesAvailable = new ArrayList<>();
+        slidesAvailable.addAll(horizSlides);
+        slidesAvailable.addAll(verticalSlides);
+
+        while (!slidesAvailable.isEmpty()) {
+            slides.add(slidesAvailable.remove(random.nextInt(slidesAvailable.size())));
         }
     }
 

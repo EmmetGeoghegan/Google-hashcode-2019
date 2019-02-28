@@ -1,18 +1,36 @@
-import java.io.File;
 import java.util.List;
 
 public class Main {
 
+    private static final int FILE_BF_TIME_SECONDS = 30;
+
     public static void main(String[] args) {
         InputManager inputManager = new InputManager("./hashashins/input");
 
-        for (InputFile inputFile : inputManager.getInputFiles()) {
-            List<Photo> photos = inputFile.generatePhotos();
-            SlideshowGenerator slideshowGenerator = new SlideshowGenerator(photos);
-            slideshowGenerator.generateSlideshow();
-            //inputFile.writeOutputFile(slideshowGenerator.getOutputText());
+        InputFile[] inputFiles = inputManager.getInputFiles();
 
-            System.out.printf("File: %s%nScore:%s%n%n", inputFile.getFileName(), slideshowGenerator.getScore());
+        while (true) {
+            for (int i = 1; i < inputFiles.length; i++) {
+                long startTime = System.currentTimeMillis();
+
+                while (true) {
+                    for (int j = 0; j < 100; j++) {
+                        List<Photo> photos = inputFiles[i].getPhotos();
+                        SlideshowGenerator slideshowGenerator = new SlideshowGenerator(photos);
+                        slideshowGenerator.generateSlideshow();
+
+                        if (slideshowGenerator.getScore() > inputFiles[i].getBestScore()) {
+                            inputFiles[i].setBestScore(slideshowGenerator.getScore());
+                            inputFiles[i].writeOutputFile(slideshowGenerator.getOutputText());
+                        }
+                    }
+
+                    if (System.currentTimeMillis() > startTime + (FILE_BF_TIME_SECONDS * 1000)) {
+                        System.out.printf("Switching to input file %s.%n", inputFiles[(i + 1) % inputFiles.length]);
+                        break;
+                    }
+                }
+            }
         }
     }
 
