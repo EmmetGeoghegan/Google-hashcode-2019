@@ -1,11 +1,11 @@
 public class Photo {
     private int id;
-    private boolean orientation;
+    private boolean isHorizontal;
     private String[] tags;
 
-    public Photo(int id, boolean orientation, String[] tags) {
+    public Photo(int id, boolean isHorizontal, String[] tags) {
         this.id = id;
-        this.orientation = orientation;
+        this.isHorizontal = isHorizontal;
         this.tags = tags;
     }
 
@@ -13,8 +13,8 @@ public class Photo {
         return id;
     }
 
-    public boolean isOrientation() {
-        return orientation;
+    public boolean isHorizontal() {
+        return isHorizontal;
     }
 
     public String[] getTags() {

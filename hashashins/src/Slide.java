@@ -8,6 +8,14 @@ public class Slide {
     }
 
     public String getOutputEntry() {
-        return String.format("%d %d%n", photoA.getId(), photoB.getId());
+        if (photoA != null && photoB != null) {
+            return String.format("%d %d%n", photoA.getId(), photoB.getId());
+        }
+        else if (photoA != null) {
+            return String.format("%d%n", photoA.getId());
+        }
+        else {
+            return String.format("%d%n", photoB.getId());
+        }
     }
 }

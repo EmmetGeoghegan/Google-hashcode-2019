@@ -65,16 +65,19 @@ public class InputFile {
 
         for (int i = 0; i < numSlides; i++) {
             Photo photo = new Photo(i, isHorizontal[i], tags[i]);
+            photos.add(photo);
         }
 
         return photos;
     }
 
     public void writeOutputFile(String output) {
-        File outputPath = new File("./hashashins/" + fileName + "_out.txt");
+        File outputPath = new File("./hashashins/output/" + fileName + "_out.txt");
 
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(outputPath)));
+            out.println(output);
+            out.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

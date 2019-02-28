@@ -13,7 +13,7 @@ public class SlideshowGenerator {
 
     public void generateSlideshow() {
         for (Photo photo : photosAvailable) {
-            slides.add(new Slide(photo, null));
+            if (photo.isHorizontal()) slides.add(new Slide(photo, null));
         }
     }
 
