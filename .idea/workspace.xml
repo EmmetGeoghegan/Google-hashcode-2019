@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdb936c1-c16d-4b03-9e39-811ff5fbf66e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/InputFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InputManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Photo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Slide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SlideshowGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputTextfiles/example.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OutputTextfiles/selfies.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/hashashins.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/input/a_example.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/input/b_lovely_landscapes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/input/c_memorable_moments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/input/d_pet_pictures.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/input/e_shiny_selfies.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/output/a_example_out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/output/b_lovely_landscapes_out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/output/c_memorable_moments_out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/output/d_pet_pictures_out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/output/e_shiny_selfies_out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/InputFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/InputManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/Photo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/Slide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashashins/src/SlideshowGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/InputFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/InputManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/META-INF/hashashins.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/Photo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/Slide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hashashins/SlideshowGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/c_memorable_moments_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/c_memorable_moments_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/e_shiny_selfies_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/e_shiny_selfies_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Slide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SlideshowGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SlideshowGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +20,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InputFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+            <state relative-caret-position="405">
+              <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SlideshowGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Slide.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -60,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -85,6 +72,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/InputManager.java" />
         <option value="$PROJECT_DIR$/src/InputFile.java" />
+        <option value="$PROJECT_DIR$/src/Slide.java" />
+        <option value="$PROJECT_DIR$/src/SlideshowGenerator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -133,7 +122,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551978689205" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551980578466" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -178,12 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551978531124</updated>
-      <workItem from="1551978533685" duration="153000" />
+      <workItem from="1551978533685" duration="2045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153000" />
+    <option name="totallyTimeSpent" value="2045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1920" height="1050" extended-state="6" />
@@ -236,6 +225,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Slide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -243,17 +239,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SlideshowGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InputFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+        <state relative-caret-position="405">
+          <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
+        <state relative-caret-position="210">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
         </state>
       </provider>
     </entry>

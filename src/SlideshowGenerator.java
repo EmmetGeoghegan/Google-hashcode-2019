@@ -11,6 +11,48 @@ public class SlideshowGenerator {
     }
 
     public void generateSlideshow() {
+        generateRandomSlideshow();
+        doHillclimbingSwaps(5 * slides.size());
+    }
+
+    private void doHillclimbingSwaps(int swaps) {
+        int baseScore = getScore();
+
+        Random random = new Random();
+        Slide temp;
+
+        for (int i = 0; i < swaps; i++) {
+            int slideA = random.nextInt(slides.size() - 3) + 1;
+            int slideB;
+
+            do {
+                slideB = random.nextInt(slides.size() - 3) + 1;
+            } while (slideB == slideA || Math.abs(slideB - slideA) < 2);
+
+            int scoreBefore = 0;
+
+            scoreBefore += getSlideScore(slideA) + getSlideScore(slideB);
+
+            temp = slides.get(slideA);
+            slides.set(slideA, slides.get(slideB));
+            slides.set(slideB, temp);
+
+            int scoreAfter = getSlideScore(slideA) + getSlideScore(slideB);
+
+            if (scoreAfter >= scoreBefore) {
+                // keep changes
+                baseScore += (scoreAfter - scoreBefore);
+            }
+            else {
+                // revert changes
+                temp = slides.get(slideA);
+                slides.set(slideA, slides.get(slideB));
+                slides.set(slideB, temp);
+            }
+        }
+    }
+
+    private void generateRandomSlideshow() {
         Random random = new Random();
         List<Photo> verticalsAvailable = new ArrayList<>();
         List<Slide> verticalSlides = new ArrayList<>(verticalsAvailable.size() / 2 + 5);
@@ -49,6 +91,24 @@ public class SlideshowGenerator {
         }
 
         return output.toString();
+    }
+
+    public int getSlideScore(int index) {
+        int score = 0;
+
+        for (int i = index - 1; i <= index + 1; i++) {
+            int aTags = slides.get(i).getCombinedTags().size();
+            int bTags = slides.get(i + 1).getCombinedTags().size();
+            Set<String> intersection = new HashSet<>(slides.get(i).getCombinedTags());
+            intersection.retainAll(slides.get(i + 1).getCombinedTags());
+
+            int subscore = Math.min(aTags, bTags);
+            subscore = Math.min(subscore, intersection.size());
+
+            score += subscore;
+        }
+
+        return score;
     }
 
     public int getScore() {

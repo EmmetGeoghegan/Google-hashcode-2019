@@ -30,7 +30,7 @@ public class Slide {
         return photoB;
     }
 
-    public Set getCombinedTags() {
+    public Set<String> getCombinedTags() {
         Set<String> tags = new HashSet<>();
 
         if (photoA != null) {
