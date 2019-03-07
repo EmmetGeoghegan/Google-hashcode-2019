@@ -5,7 +5,7 @@ public class Main {
     private static final int FILE_BF_TIME_SECONDS = 30;
 
     public static void main(String[] args) {
-        InputManager inputManager = new InputManager("./hashashins/input");
+        InputManager inputManager = new InputManager("./input");
 
         InputFile[] inputFiles = inputManager.getInputFiles();
 
@@ -23,7 +23,7 @@ public class Main {
                             inputFiles[i].setBestScore(slideshowGenerator.getScore());
                             inputFiles[i].writeOutputFile(slideshowGenerator.getOutputText());
 
-                            System.out.printf("Found better score for file %s: %s",inputFiles[i].getFileName(), inputFiles[i].getBestScore());
+                            System.out.printf("Found better score for file %s: %s%n",inputFiles[i].getFileName(), inputFiles[i].getBestScore());
                         }
                     }
 

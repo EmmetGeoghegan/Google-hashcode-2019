@@ -74,7 +74,7 @@ public class InputFile {
     }
 
     public void writeOutputFile(String output) {
-        File outputPath = new File("./hashashins/output/" + fileName + "_out.txt");
+        File outputPath = new File("./output/" + fileName + "_out.txt");
 
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(outputPath)));
